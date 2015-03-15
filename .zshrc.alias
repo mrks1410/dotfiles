@@ -1,0 +1,12 @@
+#! /bin/zsh
+# -*- mode: sh -*-
+# Created 2015/03/15
+
+# ls
+alias l="ls"
+alias la="ls -a"
+alias ll="ls -l"
+alias lla="la -la"
+
+# vim
+alias v="vim"

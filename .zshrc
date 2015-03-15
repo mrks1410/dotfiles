@@ -1,24 +1,39 @@
+#! /bin/zsh
+# -*- mode: sh -*-
 # Created by newuser for 5.0.6
-# /bin/zsh
+# 2015/03/15
 
+# LANG
+export LANG=ja_JP.UTF-8
+export LESSCHARSET=utf-8
 
-# Vimみたいな操作
-# bindkey -v
-
-# 自動補完
-autoload -U compinit; compinit
-
-# cd
+# 指定したコマンドがなく、ディレクトリ名と一致した場合 cd する
 setopt auto_cd
-alias ....='cd ../../'
-alias ......='cd ../../../'
 
-# ディレクトリスタック
+# cd でTabを押すとdir list を表示
 setopt auto_pushd
+
+# 勝手に pushd
+setopt autopushd
+
+# ディレクトリスタックに同じディレクトリを追加しない
 setopt pushd_ignore_dups
 
+# コマンドのスペルチェックをする
+setopt correct
+
+# コマンドライン全てのスペルチェックをする
+setopt correct_all
+
+bindkey -v
+
 # コマンド履歴
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
+# 登録済みコマンドは古い方を削除
 setopt hist_ignore_all_dups
 
-# パス名の補完選択
-zstyle ':completion:*:default' menu select=1
+# alias 設定
+[ -f $HOME/dotfiles/.zshrc.alias ] && source $HOME/dotfiles/.zshrc.alias
