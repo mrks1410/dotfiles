@@ -3,10 +3,6 @@
 # Created by newuser for 5.0.6
 # 2015/03/15
 
-# LANG
-export LANG=ja_JP.UTF-8
-export LESSCHARSET=utf-8
-
 # 指定したコマンドがなく、ディレクトリ名と一致した場合 cd する
 setopt auto_cd
 
