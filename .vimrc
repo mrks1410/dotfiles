@@ -34,6 +34,7 @@ NeoBundle 'Yggdroot/indentLine'
 " colorscheme-----------------
 " solarized
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'w0ng/vim-hybrid'
 
 call neobundle#end()
 filetype plugin indent on
@@ -185,7 +186,7 @@ augroup END '
 """"""""""""""""""""""""""""""
 " colorscheme 
 """"""""""""""""""""""""""""""
-colorscheme solarized
+colorscheme hybrid
 syntax enable
 set background=dark
 " set background=light
